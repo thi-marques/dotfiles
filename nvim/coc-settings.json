@@ -1,0 +1,34 @@
+{
+  // Prettier
+  "prettier.arrowParens": "avoid",
+  "prettier.printWidth": 100,
+  "prettier.semi": false,
+  "prettier.singleQuote": false,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "es5",
+
+  "coc.preferences.formatOnSave": true,
+  // Highlight support
+  "semanticTokens.enable": true,
+  // Where open references while navigating throught docs
+  "coc.preferences.jumpCommand": "drop",
+
+  // Set true to show error when hovering any place in the line
+  "diagnostic.checkCurrentLine": false,
+  // Display messages diagnostic in every line of code
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+
+  // Lua
+  "sumneko-lua.enableNvimLuaDev": true,
+
+  // Rust
+  "rust-analyzer.enable": true,
+
+  // coc-explorer
+  "explorer.position": "right",
+  "explorer.width": 60,
+  "explorer.keyMappings.global": {
+    "v": "open:vsplit.intelligent"
+  }
+}
