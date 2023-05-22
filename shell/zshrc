@@ -12,21 +12,14 @@ HIST_STAMPS='dd.mm.yyyy'
 setopt autocd
 
 # Keys mapping
-set -o emacs
+set -o vi
 bindkey -v
-bindkey "^A" beginning-of-line
-bindkey "^E" end-of-line
-bindkey "^K" kill-line
 bindkey "^L" clear-screen
 bindkey "^R" history-incremental-search-backward
-bindkey "^U" kill-whole-line
-bindkey "^Y" yank
-bindkey "^W" backward-kill-word
-bindkey "" backward-kill-word
-bindkey "\ed" kill-word
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
+bindkey "" backward-kill-word # <C-BS>
 bindkey -M viins 'jk' vi-cmd-mode
+bindkey "^[[1;5D" backward-word # <C-Left>
+bindkey "^[[1;5C" forward-word # <C-Right>
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
