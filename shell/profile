@@ -7,13 +7,13 @@ fi
 
 # Rust
 RUST_PATH="$HOME/.cargo/bin"
-if [ -f RUST_PATH ]; then
+if [ -f $RUST_PATH ]; then
 	PATH="$PATH:$RUST_PATH"
 fi
 
 # Go
 GO_PATH=/usr/local/go/bin
-if [ -f GO_PATH ]; then
+if [[ -d $GO_PATH ]]; then
 	PATH="$PATH:$GO_PATH"
 fi
 
@@ -21,6 +21,18 @@ GO_HOME_BIN="$HOME/go/bin"
 if [[ -d $GO_HOME_BIN ]]; then
 	PATH="$PATH:$GO_HOME_BIN"
 fi
+
+# pnpm
+PNPM_HOME="$HOME/.local/share/pnpm"
+if [[ -d $PNPM_HOME ]]; then
+	export PNPM_HOME
+	PATH="$PATH:$PNPM_HOME"
+fi
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 show_path() {
 	echo "${PATH//:/\n}" | sort

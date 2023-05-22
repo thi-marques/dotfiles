@@ -23,7 +23,7 @@ bindkey "^[[1;5C" forward-word # <C-Right>
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/thiago/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -59,11 +59,3 @@ bindkey '^ ' autosuggest-accept
 # Zinit Plugins
 zinit light spaceship-prompt/spaceship-prompt
 
-
-# pnpm
-export PNPM_HOME="/home/thiago/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
-# Go path
-export PATH="$PATH:/usr/local/go/bin"
