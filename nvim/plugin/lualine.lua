@@ -32,7 +32,7 @@ function GetBatteryStatus()
 
 	local iconsNotCharging = { "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" }
 	local iconsCharging = { "󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅" }
-	local icons = status == "Charging" or status == "Full" and iconsCharging or iconsNotCharging
+	local icons = (status == "Charging" or status == "Full") and iconsCharging or iconsNotCharging
 	local index = math.floor(capacity / 100 * 10) + 1
 
 	return icons[index] .. " " .. capacity .. "%%"
