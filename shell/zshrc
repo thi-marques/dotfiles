@@ -58,4 +58,4 @@ bindkey '^ ' autosuggest-accept
 
 # Zinit Plugins
 zinit light spaceship-prompt/spaceship-prompt
-
+source <(kubectl completion zsh)
