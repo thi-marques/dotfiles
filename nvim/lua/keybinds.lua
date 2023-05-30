@@ -94,4 +94,7 @@ keyset('', '<M-z>', function() vim.opt.wrap = not vim.opt.wrap:get() end)
 -- Vim visual multi
 keyset('n', '<C-L>', ':call vm#commands#find_all(0, 1)<cr>', { noremap = true, silent = true })
 
+-- Go declaration
+keyset('i', '<C-=>', ':=', { noremap = true })
+
 return keyset
